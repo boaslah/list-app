@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Display List</title>
 
+    <!-- css internal styeling -->
     <style>
 
         .container{
             margin: 40px auto;
-            width: 550px;
+            width: 750px;
             border: 1px solid black;
             padding: 30px;
         }
@@ -25,6 +26,22 @@
         tr:nth-child(even){
             background: #f1f1f1;
         }
+
+        button{
+            background: rgb(253, 216, 6);
+            border-style: none;
+            color: white;
+            width:70px; 
+            padding: 8px;
+            font-size: 15px;
+            border-radius: 5px;
+            /* margin-top: 30px; */
+        }
+
+        button:hover{
+            cursor: pointer; 
+        }
+
         thead{
             background: black;
             color: white;
@@ -32,40 +49,47 @@
         h1{
             text-align: center;
         };
+        #input_elements{
+            margin-left: 40px;
+        }
+        #input_elements input{
+            width: 190px;
+            padding: 10px;  
+            font-size: 15px;
+        }
 
     </style>
 </head>
 
 <body>
+    <!-- container that holdes the html element and the content of the page -->
     <div class="container">
 
         <h1>
             List Table
         </h1>
 
+        <div id="input_elements" style="margin-left: 250px; margin-bottom:30px; display: none;">
+            <input type="text" placeholder="List Name" id="list_name">
+    
+            <button type="button" id="submit" onclick="editList()">Save</button>
+        </div>
+
+        <!-- table to display the Names of list -->
         <table>
           <thead>
               <th>List Name</th>
               <th>Date Created</th>
+              <th>Edit</th>
+              <th>Delete</th>
           </thead>
           <tbody id="table_body">
-            <tr>
-                <td>KSAJDKJDLKD</td>
-                <td>jrahifrjaiuroi</td>
-            </tr>
-            <tr>
-                <td>KSAJDKJDLKD</td>
-                <td>jrahifrjaiuroi</td>
-            </tr>
-            <tr>
-                <td>KSAJDKJDLKD</td>
-                <td>jrahifrjaiuroi</td>
-            </tr>
           </tbody>
         </table>
 
     </div>
 
+    <!-- linking JavaScript -->
     <script src="./js/display-list.js"></script>
     
 </body>

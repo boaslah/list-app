@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create Menber</title>
 
+    <!-- css internal style -->
     <style>
         .container{
             margin: 40px auto;
@@ -24,17 +25,22 @@
             padding: 15px;
         }
         button{
-        font-size: 20px;
-        margin-left: 300px; 
-        padding: 10px;
-        width: 100px;
-        background: rgb(253, 216, 6);
-        color: white;
-        border: none;
-        border-radius: 5px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+            font-size: 20px;
+            margin-left: 300px; 
+            padding: 10px;
+            width: 100px;
+            background: rgb(253, 216, 6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
+
+        button:hover{
+            cursor: pointer; 
+        }
+
         label {
             font-weight: bold;
             display: block;
@@ -47,12 +53,14 @@
 
 <body>
 
+    <!-- container that holdes the html elements and the content of the page -->
     <div class="container">
 
         <h1>
             Add Member
         </h1>
 
+        <!-- form element for the to get the user details -->
         <form>
             <label>Full Name</label>
             <input type="text" placeholder="Add Full Name" id="full_name">
@@ -70,6 +78,7 @@
         </form>
     </div>
 
+    <!-- linking JavaScript -->
     <script src="./js/create-member.js"></script>
     
 </body>
