@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Display List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
     <!-- css internal style -->
     <style>
+        body{
+            background: #f1f1f1;
+            font-family: sans-serif;
+        }
         .container{
             margin: 40px auto;
             width: 1000px;
@@ -27,7 +32,7 @@
         }
 
         button{
-            background: rgb(253, 216, 6);
+            background: #5c94bd;
             border-style: none;
             color: white;
             width:70px; 
@@ -36,11 +41,12 @@
             border-radius: 5px;
         }
         thead{
-            background: black;
+            background: #5c94bd;
             color: white;
         }
         h1{
             text-align: center;
+            margin-left: -100px;
         };
 
         button:hover{
@@ -55,17 +61,35 @@
             padding: 10px;  
             font-size: 15px;
         }
+        .display_members{
+            padding: 20px;
+            background: #5c94bd;
+            color: white;
+            margin-left: -10px;
+            margin-right: -8px;
+            margin-top: -30px;
+            display: flex;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            width: 669px;
+        }
+        i{
+            font-size: 40px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
 <body>
-
+    <div class="display_members">
+        <a href="home-page.html"><i class="fas fa-home"></i></a>
+        <h1>Members</h1>
+    </div>
     <!-- container that holdes the html elements and the content of the paeg -->
     <div class="container">
 
-        <h1>
-           Members Table
-        </h1>
         <div id="input_elements">
             <input type="text" placeholder="Add Full Name" id="full_name">
 
@@ -75,7 +99,7 @@
     
             <input type="date" id="date_of_birth">
     
-            <button type="button" id="submit" onclick="editMember()">Submit</button>
+            <button type="button" id="submit" onclick="editMember()">Save</button>
         </div>
 
         <!-- table that display the names of members -->

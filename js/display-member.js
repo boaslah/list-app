@@ -4,6 +4,8 @@ var members = JSON.parse(localStorage.getItem('Members'));
 var input_elements = document.getElementById('input_elements');
 var date = new Date();
 var button_id;
+var buttons = document.querySelectorAll('button');
+
 
 // getting input elements
 var full_name = document.getElementById('full_name');
@@ -12,8 +14,18 @@ var address = document.getElementById('address');
 var date_of_birth = document.getElementById('date_of_birth');
 
 // add event listener to the DOM
-document.addEventListener('click', event => {
-    button_id = event.target.id;
+// document.addEventListener('click', event => {
+//     button_id = event.target.id;
+//     console.log(button_id)
+// })
+
+buttons.forEach(el => {
+    console.log(el)
+    el.addEventListener('click', event => {
+        console.log(event.target)
+        button_id = event.target.id;
+        console.log(button_id)
+    })
 })
 
 // function to show input elements
@@ -31,7 +43,7 @@ function clearInputElements(){
 
 // function to edit member
 function editMember(){
-    console.log(button_id);
+    // console.log(button_id);
     if(  full_name.value == "", contact.value == "", address.value == "", date_of_birth.value == ""){
         alert('please enter a details');
     }else{

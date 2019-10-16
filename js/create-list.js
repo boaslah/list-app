@@ -2,9 +2,14 @@
 var create_list = document.getElementById('create_list');
 var array_of_list = [];
 
+function clearInput(){
+    create_list.value = "";
+}
+
 // add eventListiner to the submit buttom 
 document.getElementById('submit').addEventListener('click', function(){
     getListName();
+    clearInput()
 })
 
 // function that sent the array to local storage

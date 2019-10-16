@@ -6,9 +6,17 @@ var address = document.getElementById('address');
 
 var members = [];
 
+function clear(){
+    full_name.value = "";
+    contact.value = "";
+    date_of_birth.value = "";
+    address.value = "";
+}
+
 // Adding eventListener to the submit button
 document.getElementById('submit').addEventListener('click', function(){
     getMemberDetils(full_name.value, contact.value, date_of_birth.value, address.value);
+    clear();
 })
 
 // a function that get the user input as a pariameter put it in an array and sent it to local storage

@@ -3,6 +3,8 @@ var list_table_body = document.getElementById('table_body');
 var list = JSON.parse(localStorage.getItem('List-Name'));
 var date = new Date();
 var button_id;
+var textContent;
+
 
 // get input element by id
 var input_elements = document.getElementById('input_elements');
@@ -12,6 +14,9 @@ var list_name = document.getElementById('list_name');
 document.addEventListener('click', function(event){
     button_id = event.target.id;
     console.log(button_id);
+    textContent = event.target;
+    console.log(textContent.firstChild.data)
+    localStorage.setItem('List-title', JSON.stringify(textContent.firstChild.data));
 })
 
 document.getElementById('list_name').removeEventListener('click', function(event){
@@ -50,7 +55,7 @@ function display(){
         var listItems =  `
         
             <tr>
-                <td>${list[count]}</td>
+                <td><a href="././list-items.html">${list[count]}</a></td>
                 <td>${date.toDateString()}</td>
                 <td><button id = "${count}" onclick = "shoeInputElement()" >Edit</button></td>
                 <td><button id = "${count}" onclick = "deleteList()">Delete</button></td>
