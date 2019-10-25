@@ -22,7 +22,6 @@
             border-collapse: collapse;
             width: 100%;
             height: 250px;
-            /* display: none; */
         }
         td{
             text-align: center;
@@ -76,47 +75,24 @@
         a:hover{
             cursor: pointer;
         }
-        #ul{
-            text-decoration: none;
-            width: 200px;
-            height:160px;
-            box-shadow: 5px 5px 5px 5px #a8a8aa;
-            margin-top: -40px;
-            margin-left: 300px;
-            overflow: scroll;
-            display: none;
-        }
-        li:hover{
-            cursor: pointer;
-            background: #f1f1f1;
-        }
-        li{
-            padding: 17px;
-        }
+       
         .list_name{
             background: #5c94bd;
             margin-left: -10px;
             margin-right: -8px;
             margin-top: -30px;
             color: white;
-            padding: 20px;
+            padding: 30px;
         }
     </style>
 </head>
 
 <body>
     <div class="list_name">
-        <h1></h1>
+        <h1 id="h1tag"></h1>
     </div>
     <!-- container that holdes the html element and the content of the page -->
     <div class="container">
-
-        
-
-        <button type="button" id="submit" onclick="showTeamMembers()"style="margin-left: 300px;">Add Member</button>
-
-        <ul id="ul"></ul>
-
         <!-- table to display the Names of list -->
         <table id="table">
           <thead>

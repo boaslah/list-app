@@ -1,6 +1,6 @@
-// declearations of variables 
+// declearations of variables
+var array_of_list = JSON.parse(localStorage.getItem("List-Name")); 
 var create_list = document.getElementById('create_list');
-var array_of_list = [];
 
 function clearInput(){
     create_list.value = "";
